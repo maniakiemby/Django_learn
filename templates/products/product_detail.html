@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ object.title }}</h1>
+<p>{% if object.description != None and object.description != '' %}{{ description }}
+{% else %}Description coming soon..{% endif %}</p>
+<p><h3>Price: {{ object.price }}</h3></p>
+{% endblock %}
+
+
+
+{% comment %}
+<p><a href="/products/"></a></p>
+
+
+
+<form action='.' method='GET'>{% csrf_token %}
+    <p><input type='submit' value='product_list.html' />  <a href='../'>List products</a></p>
+
+</form>
+{% extends 'product_list.html' %}{% endcomment %}
